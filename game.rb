@@ -15,6 +15,14 @@ class Game
             players[0].lose_points
             puts "#{players[0].long}: Seriously? No!"
         end
+
+        if players[0].score == 0
+            puts "#{players[1].long} wins with a score of #{players[1].final_score} vs #{players[0].long}: #{players[0].final_score}"
+        else
+            players.reverse!
+            "#{players[1].short}: #{players[1].final_score} vs #{players[0].short}: #{players[0].final_score}"
+            start_game(players)
+        end
     end
 end
 
