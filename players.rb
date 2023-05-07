@@ -13,7 +13,11 @@ class Player
     end
 
     def lose_points
-        self.score -= 1
+        @score -= 1
+    end
+
+    def final_score
+        "#{score}/3"
     end
 end
 
